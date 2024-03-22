@@ -17,10 +17,10 @@ pipeline {
                 echo "rererer..."
             }
         }
-        // stage('push in defectdojo') {
-        //     steps {
-        //         echo 'Hello World'
-        //     }
-        // }
+        stage('push in defectdojo') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
 }
