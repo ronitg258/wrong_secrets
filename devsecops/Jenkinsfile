@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    tools {nodejs "node"}
+    
+    // environment {
+    //     SEMGREP_APP_TOKEN = credentials('SEMGREP_APP_TOKEN')
+    // }
+
+    stages {
+        stage('semgrep scan') {
+            steps { 
+                echo "jkfd"
+                sh 'pwd'
+                echo "reaching...."
+                sh 'pwd'
+                // sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
+                echo "rererer..."
+            }
+        }
+        // stage('push in defectdojo') {
+        //     steps {
+        //         echo 'Hello World'
+        //     }
+        // }
+    }
+}
