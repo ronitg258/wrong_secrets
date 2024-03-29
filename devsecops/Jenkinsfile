@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    tools {nodejs "node"}
     
     environment {
      SEMGREP_APP_TOKEN = credentials('SEMGREP_APP_TOKEN')
