@@ -9,7 +9,7 @@ pipeline {
         stage('semgrep scan') {
             steps { 
                 echo "semgrep started"
-                pwd
+                sh 'pwd'
                 sh 'semgrep --version'
                 // sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
                 echo "semgrep completed"
