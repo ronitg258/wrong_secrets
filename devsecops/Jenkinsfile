@@ -2,23 +2,18 @@ pipeline {
     agent any
     tools {nodejs "node"}
     
-    // environment {
-    //     SEMGREP_APP_TOKEN = credentials('SEMGREP_APP_TOKEN')
-    // }
+    environment {
+     SEMGREP_APP_TOKEN = credentials('SEMGREP_APP_TOKEN')
+    }
 
     stages {
-        stage("Maven Build"){
-            steps{
-                bat 'mvn clean package'
-            }
-        }
         stage('semgrep scan') {
             steps { 
                 echo "jkfd"
                 sh 'pwd'
                 echo "reaching...."
                 sh 'pwd'
-                // sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
+                sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
                 echo "rererer..."
             }
         }
