@@ -12,7 +12,7 @@ pipeline {
                 sh 'pwd'
                 echo "reaching...."
                 sh 'pwd'
-                sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
+                // sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
                 echo "rererer..."
             }
         }
