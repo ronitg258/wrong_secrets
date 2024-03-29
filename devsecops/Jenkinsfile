@@ -11,7 +11,7 @@ pipeline {
                 echo "semgrep started"
                 sh 'pwd'
                 sh 'semgrep --version'
-                // sh 'semgrep scan --config auto --output devsecops/semgrepscanjuiceshop_results.json --json --exclude="devsecops"'
+                sh 'semgrep scan --config auto --output devsecops/semgrepwrongsecrets_results.json --json --exclude="devsecops"'
                 echo "semgrep completed"
             }
         }
